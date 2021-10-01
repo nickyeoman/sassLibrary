@@ -1,0 +1,16 @@
+{
+    "name": "nickyeoman/sasslibrary",
+    "description": "sass library",
+    "homepage": "https://www.nickyeoman.com",
+    "type": "library",
+    "license": "CC0-1.0",
+    "authors": [
+        {
+          "name": "Nick Yeoman",
+          "email": "c@nickyeoman.com",
+          "homepage": "https://www.nickyeoman.com",
+          "role": "Developer"
+        }
+    ],
+    "require": {}
+}
