@@ -1,0 +1,123 @@
+/// The template for nickyeoman.com
+
+=template-nix
+
+  $max-width: 1646px
+  $mobile-width: 899px
+  $min-width: 320px
+  $nix-blue: #3b91c4
+  $nix-dark: #1F2041
+  $nix-orange: #F86624
+  $nix-yellow: #FED766
+  $nix-purple: #6D597A
+
+  html
+    +htmldefaults
+
+    body
+      font-family: 'Source+Code+Pro'
+      border-top: 4px solid $nix-blue
+      border-bottom: 3px solid $nix-blue
+
+    a
+      color: $nix-blue
+      transition: 0.5s
+      &:hover
+        color: $nix-dark
+
+  div.logo
+    #logo
+      opacity: 0.9
+      margin: 10px
+      width: 270px
+      min-width: 270px
+      min-height: 48px
+
+      &:hover
+        opacity: 1
+
+    +lt(899px)
+      text-align: center
+
+  nav#mainmenu
+    +bg(#000)
+    +gt(899px)
+      label, input
+        display: none
+      +nav-horz
+      .logo
+        flex-shrink: 0
+
+      ul
+
+        a
+          border-bottom: 3px solid #000
+          text-decoration: 0
+          font-size: 16px
+
+        a.active
+          border-bottom: 3px solid $nix-blue
+
+        a:hover
+          border-bottom: 3px solid $nix-orange
+          color: $nix-orange
+
+    //responsive view
+    +lt(899px)
+      text-align: center
+      vertical-align: bottom
+
+      .material-icons
+        font-size: 20px
+        vertical-align: bottom
+
+      label
+        color: white
+        font-size: 16px
+        +button
+        display: inline
+
+      ul
+        list-style-type: none
+        padding: 0
+        transform: scale(1,0)
+        transform-origin: top
+        transition: transform 200ms ease-in-out
+        height: 0
+        color: white
+
+        li a
+          display: block
+          font-size: 16px
+          padding: 10px 0
+
+          &:hover
+            background-color: $nix-dark
+            color: $nix-yellow
+
+      input#res-nav
+        display: none
+
+      #res-nav:checked ~ ul
+        transform: scale(1,1)
+        height: 100%
+
+  .right-middle
+    +lt(899px)
+      +align-content(center, center)
+      padding: 10px 0
+    +gt(899px)
+      +align-content(right, center)
+      padding: 10px
+
+    a
+      +button()
+
+  div#page
+    .container
+      +width($max-width)
+      +bg(white)
+      text-align: center
+
+  footer
+    +bg(navy)

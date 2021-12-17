@@ -1,0 +1,21 @@
+/// Background Gradient
+/// http://www.w3schools.com/css/css3_gradients.asp
+=bg-grad-horz($left-color: #00c6ff,$right-color: #0072ff)
+    background: $left-color /* fallback for old browsers */
+    background: linear-gradient(to left, $left-color , $right-color) /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+=bg-grad-vert($top-color: #00c6ff,$bottom-color: #0072ff)
+    background: $top-color
+    background: -webkit-linear-gradient(top, $top-color, $bottom-color)
+    background: -o-linear-gradient(bottom, $top-color, $bottom-color)
+    background: -moz-linear-gradient(bottom, $top-color, $bottom-color)
+    background: linear-gradient(to bottom, $top-color, $bottom-color)
+
+/// Background with plain color or image
+=bg($color: white, $background-image: false, $background-repeat: no-repeat)
+  background-color: $color
+
+  @if $background-image
+    background-image: url($background-image)
+    background-position: center top
+    background-repeat: $background-repeat

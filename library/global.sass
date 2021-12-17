@@ -1,0 +1,45 @@
+/// Global mixins
+/// These mixins are usually assigned to a class
+
+/// Debug mixin for quickly placing a border style around what you are working on
+/// requires $debug to be set to true or it will hide
+=db($color: red)
+    @if $debug
+      border: 1px solid $color
+
+=container
+    display: block
+    margin: 0 auto
+    max-width: $max-width
+
+=clearfix
+    &:after
+        content: ""
+        display: table
+        clear: both
+
+/// Border Radius
+=border-radius($size: 8px)
+    -webkit-border-radius: $size
+    -moz-border-radius: $size
+    border-radius: $size
+
+/// Box Shadow
+=boxshadow($color: #ccc)
+    -webkit-box-shadow: 2px 2px 8px 1px $color
+    -moz-box-shadow: 2px 2px 8px 1px $color
+    box-shadow: 2px 2px 8px 1px $color
+
+/// Youtube videos
+=youtube
+  position: relative
+  padding-bottom: 56.25%
+  padding-top: 25px
+  height: 0
+
+  iframe
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
