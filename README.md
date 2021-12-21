@@ -12,7 +12,7 @@ I like to keep my code clean, so the main goal of this project is the following:
 * Keep a library of useful styles that can easily be called
 * Don't load anything you don't use
 * Don't load more than one style sheet
-* Don't use more than one class and one id per element.
+* Don't use more than one class and/or one id per element.
 
 ## Usage
 
