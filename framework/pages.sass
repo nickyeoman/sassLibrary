@@ -1,17 +1,20 @@
 =pages
-  
-  #page-admin article table#pages-list
-    width: 100%
+  //pages-admin
+  body#page-admin article
 
-    th, td
-      border: 1px solid #cacaca
-      padding: 5px 20px
+    //The table
+    table#pages-list
+      width: 100%
 
-    th
-      background-color: #f0f0f0
-      font-weight: bold
+      th, td
+        border: 1px solid #cacaca
+        padding: 5px 20px
 
-  #page-edit div.formContainer
+      th
+        background-color: #f0f0f0
+        font-weight: bold
+
+  body#page-edit div.formContainer
     border: 1px solid #fafafa
 
     div.row
@@ -25,14 +28,14 @@
       width: 100%
       display: block
 
-      &[name=intro]
-        height: 100px
-
-      &[name=body]
-        height: 600px
-
     input
       width: 100%
 
-    &[type=submit]
+    input[type=submit]
       width: auto
+
+    textarea[name=intro]
+      height: 100px
+
+    textarea[name=body]
+      height: 600px
