@@ -1,0 +1,54 @@
+// tabs
+  Tabs need to have a container (#tabcontainer)
+  A radio (hidden)
+  and a label
+  forexample:
+  <div id="tabcontainer">
+    <input type="radio" id="tabhome" name="tabs" checked="checked">
+    <label for="tabhome" class="tabnav">Body Content</label>
+    <div class="tab" id="tab1">
+      <p>tab content</p>
+    </div>
+  </div>
+  Thanks to ieatwebsites for the tab css trick https://www.youtube.com/watch?v=oLqdy95LZSw
+
+=tabs ($label-bg: black, $label-bg-selected: white, $label-border: black, $label-color: white, $tab-bg: 1px solid black, $label-width: 200px)
+  #tabcontainer
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: 40px
+
+    input[type="radio"]
+      display: none
+
+      &:checked + label + .tab
+        display: block
+
+      &:checked + label
+        background-color: $label-bg-selected
+        color: $label-bg
+
+      & + label
+        background-color: $label-bg
+        border: $tab-bg
+        border-bottom: 0
+        color: $label-color
+        padding: 5px 15px
+        margin-right: 10px
+        border-radius: 5px 5px 0px 0px
+
+        &:hover
+          border: 1px solid #c7c7c7
+          border-bottom: 0
+          background-color: $label-bg-selected
+          color: $label-bg
+
+
+    .tab
+      width: 100%
+      order: 1 // places tabs at the top
+      display: none
+      background-color: $label-bg-selected
+      border: 1px solid #edf2ff
+      border-top: $tab-bg
+      padding: 30px 10px
