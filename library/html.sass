@@ -1,8 +1,7 @@
 /// HTML reset and normalize
 
 // set to html
-=htmldefaults
-
+=htmldefaults()
   height: 100%
   font-family: sans-serif
   -ms-text-size-adjust: 100%
@@ -12,17 +11,19 @@
   line-height: 1.4
 
   ::selection
-      color: white
+      color: $highlightText
       background:  $highlight
       text-shadow: none
 
   *::-moz-selection
       background: $highlight none repeat scroll 0% 0%
-      color: #FFF
+      color: $highlightText
       text-shadow: none
 
   *
       box-sizing: border-box
+
+
 
   body
       height: 100%
