@@ -30,16 +30,16 @@ composer require nickyeoman/sassLibrary
 cp vendor/nickyeoman/sasslibrary/html/sample.layout.html public/index.html
 
 # Create a master sass file in the sass directory of your project.
-touch sass/PROJECTNAME.sass
+mkdir sass; touch sass/project.sass
 # import the libraries
 echo '@import ../vendor/nickyeoman/sasslibrary/master.sass' > sass/PROJECTNAME.sass
 
 # compile sass
-sass sass/PROJECTNAME.sass public/css/main.css
+sass sass/project.sass public/css/main.css
 ```
 
 Nothing should happen as you have to explicitly call on the library for it to render.
-For example, in sass/PROJECTNAME.sass you will want to do:
+For example, in sass/project.sass you will want to do:
 
 ```sass
 html
