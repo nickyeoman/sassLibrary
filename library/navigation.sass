@@ -26,3 +26,26 @@
         justify-content: center
         text-align: center
         padding: 0 5px
+
+// Horizontal navigation
+  uses grid to position the items
+  give +nav-grid-horz to the container of the ul
+    
+=nav-grid-horz
+
+    padding: 0
+    ul
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        list-style-type: none
+        margin: 0
+        padding: 0
+        
+        a
+            padding: 10px 20px
+            display: flex
+            align-items: center
+
+            &:hover
+                background-color: blue
+                color: black

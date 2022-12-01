@@ -1,0 +1,37 @@
+// for use with nytwig
+
+=tpl-nytwig
+    html
+        +htmldefaults
+        +bodystyle
+
+    +tabs
+
+    header, #page, footer
+        +width(1080px)
+        border-left: 1px solid white
+        border-right: 1px solid white
+        
+    header
+        background-color: indigo
+        padding: 20px 10px
+        color: white
+        border-bottom-left-radius: 8px
+        border-bottom-right-radius: 8px
+        
+        a
+            color: #fff
+
+        .container
+            +grid(2, 25%, 50%)
+
+            #logo
+                font-size: 24px
+                a
+                    text-decoration: none
+            nav
+                +nav-grid-horz
+
+    article
+        margin: 0
+        padding: 40px 20px

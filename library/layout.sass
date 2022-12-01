@@ -10,7 +10,12 @@
   align-items: $y
   text-align: $y
 
+// Grid
+  parm 1: number of columns
+  parm 2: minimum width
+  parm 3: max width
+  2 and 3 can be percentage or pixels
+
 =grid($numcols: 2, $min: auto, $max: auto)
-  div.grid.row
-    display: grid
-    grid-template-columns: minmax($min, $max) repeat($numcols - 1 , 1fr)
+  display: grid
+  grid-template-columns: minmax($min, $max) repeat($numcols - 1 , 1fr)
