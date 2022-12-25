@@ -12,7 +12,7 @@ I like to keep my code clean, so the main goal of this project is the following:
 * Keep a library of useful styles that can easily be called
 * Don't load anything you don't use
 * Don't load more than one style sheet
-* Try not to use more than one class per element.
+* Try not to minimize the number of classes per element.
 
 ## Usage
 
@@ -31,6 +31,7 @@ cp vendor/nickyeoman/sasslibrary/html/sample.layout.html public/index.html
 
 # Create a master sass file in the sass directory of your project.
 mkdir sass; touch sass/project.sass
+
 # import the libraries
 echo '@import ../vendor/nickyeoman/sasslibrary/master.sass' > sass/PROJECTNAME.sass
 
