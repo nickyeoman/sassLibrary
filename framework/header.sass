@@ -1,0 +1,21 @@
+=framework-header($bgcolor: indigo, $color: white, $padding: 12px, $hover: blue)
+    header
+        background-color: $bgcolor
+        padding: $padding
+        color: $color
+
+        .container
+            +grid(2)
+      
+            #logo
+                padding: $padding
+  
+            nav
+                +nav-grid-horz(7)
+
+        a
+            text-decoration: none
+            color: $color
+
+            &:hover
+                color: $hover

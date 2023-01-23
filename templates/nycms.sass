@@ -1,38 +1,24 @@
 // for use with cms
 
 =tpl-nycms
+
+    $padding: 10px
+
     html
         +htmldefaults
         +bodystyle
 
     +tabs
+    +forms
+    +messages
     +framework-dashboard
-
-    header, #page, footer
-        +width(1080px)
-        border-left: 1px solid white
-        border-right: 1px solid white
-        
-    header
-        background-color: indigo
-        padding: 20px 10px
-        color: white
-        border-bottom-left-radius: 8px
-        border-bottom-right-radius: 8px
-        
-        a
-            color: #fff
-
-        .container
-            +grid(2, 25%, 50%)
-
-            #logo
-                font-size: 24px
-                a
-                    text-decoration: none
-            nav
-                +nav-grid-horz
+    +framework-header(#bebebe, #000000, $padding, #00aa00)
+    +adminbar
+    
+    #page > .container
+        +grid(3)
+        align-items: normal
 
     article
         margin: 0
-        padding: 40px 20px
+        padding: $padding

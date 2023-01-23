@@ -31,12 +31,12 @@
   uses grid to position the items
   give +nav-grid-horz to the container of the ul
     
-=nav-grid-horz
+=nav-grid-horz($cols: 4)
 
     padding: 0
     ul
         display: grid
-        grid-template-columns: repeat(4, 1fr)
+        grid-template-columns: repeat($cols, 1fr)
         list-style-type: none
         margin: 0
         padding: 0
@@ -45,7 +45,4 @@
             padding: 10px 20px
             display: flex
             align-items: center
-
-            &:hover
-                background-color: blue
-                color: black
+            justify-content: center
