@@ -16,6 +16,8 @@ I like to keep my code clean, so the main goal of this project is the following:
 
 ## Usage
 
+TODO: # sudo docker build -t sass-container .
+
 The intended use is as follows:
 ```bash
 
